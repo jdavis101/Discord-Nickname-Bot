@@ -23,4 +23,4 @@ async def on_message(message):
     await message.channel.send('Hello!')
 
   if message.content.startswith('$what is my name'):
-    await message.channel.send(f'Hello! {client.user}' )
+    await message.channel.send(f'Hello! {message.author}' )
