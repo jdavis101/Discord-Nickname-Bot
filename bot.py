@@ -26,15 +26,13 @@ async def on_message(message):
   # currently prints display name to console
   # why does it print twice?
   if message.content.startswith('$r'):
-    await message.channel.send(f'Hello! {message.author}')
+    #await message.channel.send(f'Hello! {message.author}')
     # await message.channel.send(f'test:  {message.guild.members.username }')
     for guild in client.guilds:
         for member in guild.members:
             # print(member.display_name)
-            # prints the display name of the author and
-            # the person who sent the message
-            print((f'Name is {member.display_name}'))
-            print((f'Name is {message.author.display_name}'))
+            # print((f'Name is {member.display_name}'))
+            await message.channel.send(f'Hello {message.author.display_name}')
             break
         
         # Key left out for security reasons
