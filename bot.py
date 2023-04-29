@@ -29,10 +29,16 @@ async def on_message(message):
     #await message.channel.send(f'Hello! {message.author}')
     # await message.channel.send(f'test:  {message.guild.members.username }')
     for guild in client.guilds:
-        for member in guild.members:
+       for member in guild.members:
             # print(member.display_name)
             # print((f'Name is {member.display_name}'))
             await message.channel.send(f'Hello {message.author.display_name}')
+            text = message.content
+            ntext = text[3:]
+            await message.channel.send(f'You said: {ntext}')
+            # await message.author.display_name.edit(nick="pig benis")
+            await member.edit(nick="ntext")
+            
             break
         
         # Key left out for security reasons
