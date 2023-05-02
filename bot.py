@@ -47,9 +47,6 @@ async def on_message(message):
         #await member.edit(nick="ntext")
 
         break
-
-
-
         
         # Key left out for security reasons
         client.run('apikey')
