@@ -7,7 +7,7 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
-
+ 
 
 @bot.command()
 async def cn(ctx, member: discord.Member, *, new_nick):
